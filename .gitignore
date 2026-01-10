@@ -1,0 +1,31 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Dossiers de build
+/build/
+/dist/
+/out/
+
+# Fichiers temporaires
+*.log
+*.tmp
+*.temp
+
+# Node.js
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
