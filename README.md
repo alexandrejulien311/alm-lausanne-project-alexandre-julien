@@ -23,4 +23,4 @@ Datasets have been collected using the links in the py scripts in data/data_coll
 
 
 ## About dependencies
-As this project has been coded using a Mac with an Intel chip, some problem with ```pytorch``` could occur. Indeed, torch is not well supported on the Intel chip, but conda the use of conda seems to solve the problem.
+As this project has been coded using a Mac with an Intel chip, some problem with ```pytorch``` could occur. Indeed, torch is not well supported on the Intel chip, but the use of conda seems to solve the problem.
