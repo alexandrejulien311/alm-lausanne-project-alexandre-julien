@@ -7,6 +7,7 @@ from data.training_data import TRAINING_DATA_FOLDER_PATH
 import pandas as pd
 from pathlib import Path
 from stable_baselines3 import PPO
+import time
 
 
 GENERATED_DATA_PATH = (
@@ -63,7 +64,7 @@ model = PPO(
     batch_size=64,
     n_steps=128,
 )
-import time
+
 
 n_test = 10
 start = time.time()
@@ -71,7 +72,7 @@ model.learn(total_timesteps=n_test)
 end = time.time()
 
 time_per_step = (end - start) / n_test
-print(f"Temps par step: {time_per_step:.5f} s")
+print(f"Time for steps: {time_per_step:.5f} s")
 
 # see one trajectory
 obs, info = env.reset()
@@ -82,4 +83,4 @@ while not (terminated or truncated):
     action, _ = model.predict(obs, deterministic=True)
     obs, reward, terminated, truncated, info = env.step(action)
 
-print("Valeur finale du portefeuille :", env.portfolio_value_Y)
+print("Final value of the portfolio :", env.portfolio_value_Y)
